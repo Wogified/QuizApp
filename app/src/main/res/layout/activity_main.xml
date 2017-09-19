@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kevin.quizapp.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style = "@style/heading_question"
+                android:text="1) How much is a baker's dozen?"
+                />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/dozen_10"
+                    android:text="10"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/dozen_13"
+                    android:text="13"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/dozen_12"
+                    android:text="12"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/dozen_all"
+                    android:text="All of the Above"
+                    android:onClick="onRadioButtonClicked"
+                    />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/heading_question"
+                android:text="2) Which of the following are cheeses?" />
+
+                <CheckBox
+                    style="@style/checkboxStyle"
+                    android:id="@+id/gorgonzola"
+                    android:onClick="checkboxClicked"
+                    android:text="Gorgonzola" />
+
+                <CheckBox
+                    style="@style/checkboxStyle"
+                    android:id="@+id/brie"
+                    android:onClick="checkboxClicked"
+                    android:text="Brie" />
+
+                <CheckBox
+                    style="@style/checkboxStyle"
+                    android:id="@+id/babalooey"
+                    android:onClick="checkboxClicked"
+                    android:text="Babalooey" />
+
+                <CheckBox
+                    style="@style/checkboxStyle"
+                    android:id="@+id/mozz"
+                    android:onClick="checkboxClicked"
+                    android:text="Mozz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/heading_question"
+                    android:text="3) Fill in the blank:" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heroes never _____"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/heroesNever"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+
+                android:layout_marginLeft="16dp"
+                android:hint="Enter your answer here."
+                android:textSize="10sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/heading_question"
+                android:text="4) What is the drop rate for 5 star servants in FGO?" />
+
+            <CheckBox
+                style="@style/checkboxStyle"
+                android:id="@+id/fivePerc"
+                android:onClick="checkboxClicked"
+                android:text="5%" />
+
+            <CheckBox
+                style="@style/checkboxStyle"
+                android:id="@+id/onePerc"
+                android:onClick="checkboxClicked"
+                android:text="1%" />
+
+            <CheckBox
+                style="@style/checkboxStyle"
+                android:id="@+id/tooLow"
+                android:onClick="checkboxClicked"
+                android:text="Too Fucking Low" />
+
+            <CheckBox
+                style="@style/checkboxStyle"
+                android:id="@+id/bullshit"
+                android:onClick="checkboxClicked"
+                android:text="Bullshit" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style = "@style/heading_question"
+                android:text="5) Does the samsung galaxy note 4 suck?"
+                />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/note4Yes"
+                    android:text="Yes"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    style = "@style/checkboxStyle"
+                    android:id="@+id/note4No"
+                    android:text="No"
+                    android:onClick="onRadioButtonClicked"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:onClick="submitAnswer"
+            android:text="Submit"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="36dp"
+            android:gravity="center_horizontal"
+            android:hint="score"/>
+    </LinearLayout>
+
+
+</ScrollView>
